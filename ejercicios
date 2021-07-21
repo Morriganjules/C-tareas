@@ -1,0 +1,491 @@
+ class Program
+    {
+        static void Main(string[] args)
+        {/*
+
+            //al ingresar el numero 15 mostrar el mensaje 'niña bonita'
+
+            int numero;
+
+            Console.WriteLine("ingrese un numero");
+            numero = int.Parse(Console.ReadLine());
+            if(numero == 15)
+            {
+                Console.WriteLine("la niña bonita");
+            } else
+            {
+                Console.WriteLine("ingrese otro numero");
+                numero = int.Parse(Console.ReadLine());
+            };
+            
+            //ingresar una edad e informar si la persona es menor o no
+
+            int edad;
+            string estadoCivil;
+            Console.WriteLine("ingrese su edad");
+            edad = int.Parse(Console.ReadLine());
+             
+            while(edad <= 0 || edad >= 120)
+            {
+                Console.WriteLine("ingrese una edad valida");
+                edad = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("ingrese su estado civil");
+            estadoCivil = Console.ReadLine();
+
+            if (edad >= 18)
+            {
+                Console.WriteLine("usted es mayor");
+                if (estadoCivil == "soltero")
+                {
+                    Console.WriteLine("Usted es soltero");
+                } else
+                {
+                    Console.WriteLine("Usted no es soltero");
+                }
+            }
+            else if (edad > 13 || edad <= 17) 
+            {
+                Console.WriteLine("usted es adolescente");
+               if (estadoCivil == "soltero")
+                {
+                    Console.WriteLine("usted es soltero");
+                } else
+                {
+                    Console.WriteLine("usted es muy joven para NO ser soltero");
+                }
+            }
+            else
+            {
+                Console.WriteLine("usted es menor");
+                if (estadoCivil == "soltero")
+                {
+                    Console.WriteLine("usted es soltero");
+                }
+                else
+                {
+                    Console.WriteLine("usted es muy joven para NO ser soltero");
+                }
+            };
+            
+            //ejercicios while
+            //hacer diez repeticiones del uno al 10
+            int contador;
+            Console.WriteLine("aprete 0");
+            contador= int.Parse(Console.ReadLine());
+            while (contador <= 10)
+            {
+                Console.WriteLine(contador);             
+                contador++;
+            }
+
+            
+            //hacer 10 repeticiones del 10 al 1
+            int contador;
+            Console.WriteLine("aprete 10");
+            contador = int.Parse(Console.ReadLine());
+            while (contador >= 0)
+            {
+                Console.WriteLine(contador);
+                contador--;
+            }
+            
+
+            //pedir un clave
+
+            string clave;
+
+            Console.WriteLine("escriba la clave para ingresar");
+            clave = Console.ReadLine();
+            while(clave != "utn750")
+            {
+                Console.WriteLine("Clave incorrecta, si se la olvido la clave es utn750");
+                clave = Console.ReadLine();
+            }
+
+            Console.WriteLine("Bienvenido de vuelta");
+            
+
+            //pedir numeros al usuario haste que indique y devolver suma y promedio
+
+            int numero;
+            int acumulador = 0;
+            int contador = 0;
+            Console.WriteLine("ingrese un numero");
+            numero = int.Parse(Console.ReadLine());
+            while(numero != 0)
+            {
+                acumulador += numero;
+                contador++;
+                Console.WriteLine("ingrese otro numero o 0 para finalizar");
+                numero = int.Parse(Console.ReadLine());
+                
+            }
+
+            Console.WriteLine("la suma total es " + acumulador + " y su promedio es " + acumulador/contador);
+            
+            // pedir numero hasta que indique y numero positivos sumarlo y negativos multiplicarlos
+
+            int numero;
+            int acumulador = 0;
+            int multiplicador= 0;
+
+            Console.WriteLine("indique un numero");
+            numero = int.Parse(Console.ReadLine());
+            while (numero != 0) 
+            {
+                if (numero > 0)
+                {
+                    acumulador += numero;
+                    Console.WriteLine("ingrese otro numero o 0 para terminar");
+                    numero = int.Parse(Console.ReadLine());
+
+                } else if (numero < 0)
+                {
+                    if(multiplicador == 0)
+                    {
+                        multiplicador += numero;
+                        Console.WriteLine("ingrese otro numero o 0 para terminar");
+                        numero = int.Parse(Console.ReadLine());
+
+                    } else
+                    {
+                        multiplicador *= numero;
+                        Console.WriteLine("ingrese otro numero o 0 para terminar");
+                        numero = int.Parse(Console.ReadLine());
+                    }
+                }
+
+            }
+
+            Console.WriteLine("su suma de positivos es " + acumulador + " y su multiplicacion de negativos es " + multiplicador);
+
+
+            
+
+            //mostrar numero mayor y menor
+           
+            int numero;
+
+            Console.WriteLine("ingrese un numero");
+            numero = int.Parse(Console.ReadLine());
+            
+            int numeroMayor = numero;
+            int numeroMenor = numero;
+           
+            if (numero != 0) { 
+                if (numero >= numeroMayor)
+                {
+                    numeroMayor = numero;
+                    Console.WriteLine("ingrese otro numero o 0 para terminar");
+                    numero = int.Parse(Console.ReadLine());
+                }
+                 else if (numero <= numeroMenor){
+                    numeroMenor = numero;
+                    Console.WriteLine("ingrese otro numero o 0 para terminar");
+                    numero = int.Parse(Console.ReadLine());
+                }
+
+            };
+
+            Console.WriteLine("su numero mayor es " + numeroMayor + " y su numero menor es " + numeroMenor);
+            
+
+
+            int mes;
+
+            Console.WriteLine("Seleccione un mes, indicando su numero");
+            mes = int.Parse(Console.ReadLine());
+            while (mes <= 0 || mes > 12)
+            {
+                Console.WriteLine("seleccione un numero valido");
+                mes = int.Parse(Console.ReadLine());
+            }
+            switch (mes)
+            {
+                case 2: Console.WriteLine("Este mes no tiene mas de 29 dias");
+                    break;
+                
+                default: Console.WriteLine("este mes tiene 30 o mas dias");
+                    break;
+            }
+            
+
+            int i;
+            int boton;
+            int contador=0;
+            Console.WriteLine("Indicar cuantas veces quiere el mensaje");
+            boton = int.Parse(Console.ReadLine());
+            for(i=1; i < boton; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine(i);
+                    contador++;
+                }
+            }
+            Console.WriteLine("cantidad de numero pares: " + contador);
+            
+
+            //ARRAYS
+            //variable que contiene otras variables
+
+            int[] numeros = new int[5];//tengo que indicar el tipo de variable que va a ser y la cantidad de variables que va a contener (en este caso son 5)
+            numeros[0] = 1;
+
+            string palabra = "hola";
+            Console.WriteLine(palabra[0]); //un string es un array, en este caso nos mostraria la letra h
+            
+            //programa que indica si el string tiene la letra i
+            String palabra;
+
+            Console.WriteLine("ingrese una palabra");
+            palabra = Console.ReadLine();
+
+            for (int i = 0; i < palabra.length; i++)
+            {
+                if (palabra[i] == 'i')
+                {
+                    Console.WriteLine("la contiene");
+                    break;
+                }
+            }
+
+            
+
+
+            int[] numeros = new int[5];
+            numeros[0] = 25;
+            numeros[1] = 16;
+            numeros[2] = 48;
+            numeros[3] = 36;
+            numeros[4] = 26;
+
+
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(numeros[i]);
+            }
+            
+            int pisos = 0;
+            int[] arreglo = new int[1];
+            Console.WriteLine( "ingrese el numero de pisos" );
+            pisos = Convert.ToInt16(Console.ReadLine());
+            for (int i = 1; i <= pisos; i++)
+            {
+                int[] pascal = new int[i];
+                for (int j = pisos; j < i; j--)
+                {
+                    Console.WriteLine("");
+                }
+                for (int k = 0; k < i; k++)
+                {
+                    if (k == 0 || k == (i -1 ))
+                    {
+                        pascal[k] = 1;
+                    } else
+                    {
+                        pascal[k] = arreglo[k] + arreglo[k - 1];
+                    }
+                    Console.WriteLine("[" + pascal[k] + "]");
+                }
+                arreglo = pascal;
+                Console.WriteLine("");
+            }
+            Console.ReadLine();
+
+            
+
+
+            //FUNCIONES Y CUANDO USARLAS
+            int numeroUno;
+            int numeroDos;
+            int resultado;
+            Console.WriteLine("ingrese un numero");
+            numeroUno = int.Parse(Console.ReadLine());
+            Console.WriteLine("ingrese otro numero");
+            numeroDos = int.Parse(Console.ReadLine());
+
+            resultado = numeroUno + numeroDos;
+            Console.WriteLine(resultado);
+            */
+            //MostrarNumero(5);
+
+            //1.Loop de pares
+            //Debés crear una función llamada loopDePares que reciba como parámetro un número y haga un loop de 0 a 100 mostrando en la consola cada número del loop. 
+            //En caso de que el número de la iteración, sumado con el número pasado por parámetro, sea par, mostrá en la consola “El número x es par”.
+
+            //int numero;
+            //Console.WriteLine("ingrese un numero");
+            //numero = int.Parse(Console.ReadLine());
+            //for (int i = 0; i <= 100; i++)
+            //{
+            //    if ((numero + i) % 2 == 0)
+            //    {
+            //        Console.WriteLine("El numero " + (i + numero) + " es par");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine(i);
+
+            //    }
+            //}
+            //2.Loop de impares con palabra
+            //Debés crear una función llamada loopDeImpares que reciba como parámetro un número y una palabra y haga un loop de 0 a 100 mostrando en la consola cada número del loop. 
+            //Ahora, modificá el código para que, en caso de que ese número sumado con el número pasado por parámetro sea impar, muestre en la consola la palabra pasada por parámetro.
+            //int numero;
+            //string palabra;
+
+            //Console.WriteLine("ingrese un numero y luego una palabra");
+            //numero = int.Parse(Console.ReadLine());
+            //palabra = Console.ReadLine();
+
+            //for (int i = 0; i <= 100; i++)
+            //{
+            //    if ((numero + i) % 2 != 0)
+            //    {
+            //        Console.WriteLine(palabra);
+            //    } else
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
+
+            //3.Sumatoria
+
+            //Debés crear una función llamada `sumattion` que reciba un número como parámetro y que devuelva la sumatoria de todos sus números anteriores, incluso ese mismo.
+
+            //Ejemplo:
+            //sumattion(3) debe retornar 6 porque hace(1 + 2 + 3)
+            //sumattion(8) debe retornar 36
+
+            //int acumulador = 0;
+            //int numero;
+            //Console.WriteLine("escriba un numero");
+            //numero = int.Parse(Console.ReadLine());
+
+            //for (int i = 0; i <= numero; i++)
+            //{
+            //    acumulador = acumulador + i;
+
+            //}
+
+            //Console.WriteLine(acumulador);
+            //Realizar un programa, que pida al usuario un nombre, apellido, dni y edad(Validar que no se puedan ingresar valores negativos)
+            //Una vez pedidos los datos se abre este menu de opciones
+            //1)Mostrar datos completos
+            //2)Mostrar si es mayor o menor de edad
+            //3)Mostrar si es extranjero o no(extranjeros tienen documentos que empiezan con 9(9xxxxxxx)
+            //4)Cambiar el nombre y el apellido
+            //5)Salir
+            //Anotaciones: Verificar que no se pueda ingresar una opción del menú que no exista(Que al ingresar el numero 10 por ejemplo te pida volver a ingresar el valor correcto)
+            //En caso de poder usar funciones, hacerlo
+
+            string nombreApellido;
+            int dni;
+            int edad;
+            int opcionMenu;
+            Console.WriteLine("Ingrese su nombre y apellido");
+            nombreApellido = Console.ReadLine();
+            Console.WriteLine("Ahora ingrese su DNI, sin puntos ni guiones");
+            dni = int.Parse(Console.ReadLine());
+            Console.WriteLine("Para finalizar, ingrese su edad");
+            edad = int.Parse(Console.ReadLine());
+            while(edad < 0 || edad > 120)
+            {
+                Console.WriteLine("porfavor ingrese una edad valida");
+                edad = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine(" 1) Mostar datos completos \n 2) Mostrar si es mayor o menor de edad \n 3)Mostrar si es extranjero o no \n 4)Cambiar el nombre y el apellido \n 5)Salir");
+            opcionMenu = int.Parse(Console.ReadLine());
+           while(opcionMenu != 5) { 
+            while (opcionMenu<1 || opcionMenu > 5)
+            {
+                Console.WriteLine("Elija una opcion correcta \n 1) Mostar datos completos/n 2) Mostrar si es mayor o menor de edad\n 3)Mostrar si es extranjero o no\n 4)Cambiar el nombre y el apellido\n 5)Salir");
+                opcionMenu = int.Parse(Console.ReadLine());
+            }
+            switch (opcionMenu)
+            {
+              
+
+                case 1: Console.WriteLine("Su nombre completo es " + nombreApellido + " su DNI es " + dni + " y su edad es " + edad);
+                    Console.WriteLine(" 1) Mostar datos completos\n 2) Mostrar si es mayor o menor de edad\n 3)Mostrar si es extranjero o no\n 4)Cambiar el nombre y el apellido\n 5)Salir");
+                    opcionMenu = int.Parse(Console.ReadLine());
+                    break;
+                case 2: if(edad < 18)
+                    {
+                        Console.WriteLine("Es menor de edad");
+                    } else
+                    {
+                        Console.WriteLine("Es mayor de edad");
+                    }
+                    Console.WriteLine(" 1) Mostar datos completos\n 2) Mostrar si es mayor o menor de edad\n 3)Mostrar si es extranjero o no\n 4)Cambiar el nombre y el apellido\n 5)Salir");
+                    opcionMenu = int.Parse(Console.ReadLine());
+                    break;
+                case 3: if(dni < 90000000)
+                    {
+                        Console.WriteLine("No es extranjero");
+                    } else
+                    {
+                        Console.WriteLine("Es extranjero");
+                    }
+                    Console.WriteLine(" 1) Mostar datos completos\n 2) Mostrar si es mayor o menor de edad\n 3)Mostrar si es extranjero o no\n 4)Cambiar el nombre y el apellido\n 5)Salir");
+                    opcionMenu = int.Parse(Console.ReadLine());
+                    break;
+                case 4:
+                    Console.WriteLine("Ingrese el nuevo nombre y apellido");
+                    nombreApellido = Console.ReadLine();
+                    Console.WriteLine(" 1) Mostar datos completos\n 2) Mostrar si es mayor o menor de edad\n 3)Mostrar si es extranjero o no\n 4)Cambiar el nombre y el apellido\n 5)Salir");
+                    opcionMenu = int.Parse(Console.ReadLine());
+                    break;
+                case 5:
+                    Console.WriteLine("Hasta la proximaaa!!");
+                    break;
+
+            };
+
+            };
+
+
+
+
+            Console.ReadKey();
+            
+
+        }
+
+        //public static void MostrarNumero(int numero) 
+        //{
+        //    Console.WriteLine(numero);
+        
+        //}
+
+        //public static int SumarNumero(int numero, int otroNumero)
+        //{
+        //    int resultado;
+        //    resultado = numero + otroNumero;
+        //    return resultado;
+
+        //}
+        //public static void LoopDePares(int numero)
+        //{
+        //    for (int i = 0; i <= 100; i++)
+        //    {
+        //        if((numero + i) % 2 == 0)
+        //        {
+        //           Console.WriteLine("El numero " + (i + numero) + " es par");
+        //        } 
+        //        else
+        //        {
+        //            Console.WriteLine(i);
+                    
+        //        }
+        //    }
+            
+        //} mostrar a maxi
+
+
+    }
+    }
